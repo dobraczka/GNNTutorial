@@ -1,4 +1,4 @@
-# A Tutorial on Graph Neural Networks 🕸️🧠
+# An intro to Graph Neural Networks 🕸️🧠
 
 Graph Neural Networks have seen a rise in popularity. This is no surprise since various forms of information can be understood in the context of graphs from social networks to molecules.
 This notebook intends to illuminate the inner workings of [Graph Convolutional Networks](https://arxiv.org/abs/1609.02907) and give an intuition into some other types of Networks which extend this idea.
