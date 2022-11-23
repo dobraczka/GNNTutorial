@@ -1,4 +1,4 @@
-from typing import Any, Dict, Tuple
+from typing import Any, Dict, Tuple, Union, List
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -19,7 +19,9 @@ def draw_graph_with_attributes(
     x_nudge: float = 0.0,
     y_nudge: float = 0.07,
     ax: mpl.axes.Axes = None,
-    font_color: str = "darkgreen",
+    font_color: str = "green",
+    edge_color: str = "white",
+    node_color: Union[str, List] = "blue",
 ):
     """Draw a graph with node labels and attributes"""
     if ax is None:
@@ -28,7 +30,7 @@ def draw_graph_with_attributes(
     if pos is None:
         pos = nx.spring_layout(G)
 
-    nx.draw_networkx(G, pos=pos, with_labels=True, ax=ax)
+    nx.draw_networkx(G, pos=pos, with_labels=True, ax=ax, edge_color=edge_color, node_color=node_color)
     pos_nudged = nudge(pos, x_nudge, y_nudge)
     if props is None:
         props = nx.get_node_attributes(G, "x")
